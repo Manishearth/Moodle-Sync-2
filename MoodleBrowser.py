@@ -12,13 +12,14 @@ class MoodleBrowser:
 	def login(self,user,passwd):
 		self.b.open(self.conf['site'])
 		self.b.select_form(nr=1)
+		#print self.b.form.controls
 		for i in range(3):
 			self.b.form.controls[i].readonly = False
 		self.b["username"] = user
 		self.b["password"] = passwd
 		print "submitting"
 		resp = self.b.submit()
-		if '/login/' in br.geturl():
+		if '/login/' in self.b.geturl():
 			return False
 		return True
 		
