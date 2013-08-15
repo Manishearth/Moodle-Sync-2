@@ -23,5 +23,5 @@ class MoodleBrowser:
 		return True
 		
 
-a=MoodleBrowser()
-a.login('manish','manish')
+#a=MoodleBrowser()
+#a.login('manish','manish')
