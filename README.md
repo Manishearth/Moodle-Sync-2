@@ -1,4 +1,4 @@
 Moodle-Sync-2
 =============
 
-Revamp of MoodleSync
+Revamp of MoodleSync.
