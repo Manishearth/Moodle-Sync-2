@@ -21,3 +21,9 @@ class MoodleBrowser:
 		if '/login/' in self.b.geturl():
 			return False
 		return True
+		
+	def getcourselist(self):
+		resp=self.b.open(self.conf['site'])
+		soup = BeautifulSoup(resp.get_data())
+		links=[{"name":str(h3.find('a').contents[0]),"link":h3.find('a')['href']} for h3 in soup.findAll('h3', { "class" : "name" })]
+		print links
